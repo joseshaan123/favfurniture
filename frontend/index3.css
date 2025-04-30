@@ -1,0 +1,1280 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "monster";
+    src: url("/frontend/fonts/Montserrat-VariableFont_wght.ttf");
+}
+@keyframes goleft{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform:translateX(calc(-250px * 10))
+  }
+}
+
+@keyframes view1{
+    from{
+        opacity: 0;
+        scale: 0.5;
+        
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+        
+    }
+}
+@keyframes view2{
+    from{
+        opacity: 0;
+        scale: 0.5;
+        transform: translateX(100px);
+        
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+        transform: translateX(100px);
+    }
+}
+h1{
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    font-size: 40px;
+    font-family: "monster";
+    margin: 0 auto;
+}
+
+header{
+    background-color: #22ab3e;
+    width: 100%;
+    height: 65px;
+    max-width: 100%;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+
+}
+
+.login{
+   color: white;
+   font-family: "monster";
+   font-weight: 500; 
+   font-size: 20px;
+   margin-left: 0px;
+   background-color: #22ab3e;
+   border: 0;
+   transition: 0.5s ease;
+   cursor: pointer;
+}
+
+.login:hover{
+    scale: 1.2;
+}
+.signup{
+    color: white;
+    font-family: "monster";
+    font-weight: 500;
+    font-size: 20px;
+    background-color: #22ab3e;
+    border: 0;
+    margin-left: 30px;
+    margin-right: 20px;
+    transition: 0.5s ease;
+}
+.signup:hover{
+    scale: 1.2;
+}
+
+.sliders {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 50px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    animation: view1 linear;
+    animation-timeline: view();
+    animation-range: entry 0 ;
+  }
+
+ 
+.image-main {
+  aspect-ratio: 16/9;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    
+   
+  }
+
+ 
+  .images {
+    transition: transform 1s ease-in-out;
+    display: grid;
+    grid-template-columns: repeat(4, 100%);
+    
+  }
+
+ 
+  .image {
+    display: grid;
+    grid-template-rows: 1fr;
+    position: relative;
+    
+  }
+
+  
+  .image img {
+    height:600px;
+    filter: brightness(50%);
+    width: 100%;
+    object-fit: cover;
+    
+  }
+  .frontimagep{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -380px;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    z-index: 3;
+   
+  }
+  .navfav{
+    z-index: 4;
+    font-family: "monster";
+    font-size: 40px;
+    margin-top: -580px;
+    margin-left: 20px;
+    font-weight: 800;
+    color: white;
+  }
+ 
+  .navbutton{
+    width: 120px;
+    height: 50px;
+    border: 0;
+    border-radius: 20px;
+    padding: 5px;
+    font-family: "monster";
+    font-size: 20px;
+    font-size: 400;
+    z-index: 5;
+    background-color: #22ab3e;
+    color: white;
+    margin-top: -300px;
+    margin-left: 44%;
+  }
+
+ 
+  .circlebtn {
+    z-index: 1;
+    display: flex;
+    gap: 10px;
+    margin-left: 45%;
+    margin-top: -60px;
+    
+   
+  }
+
+  .circlebtn input[type="radio"] {
+    display: none;
+  }
+
+  .circlebtn  label {
+    
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    z-index: 1;
+    background-color: white;
+    border: 2px solid  #22ab3e;
+    
+  }
+
+  .circlebtn  input:checked + label {
+    background-color: #22ab3e;
+  }
+
+
+  .image-main2 {
+  
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    
+  }
+
+  
+  .images2 {
+    grid-template-columns: repeat(4, 100%);
+    display: grid;
+    transition: transform 1s ease-in-out;
+    
+    
+  }
+
+ 
+  .image2 {
+   
+    display: grid;
+    grid-template-rows: 1fr;
+    position: relative;
+  }
+
+
+  .image2 img {
+    height: 500px;
+    width: 100%;
+    
+    
+  }
+
+
+  .circlebtn2 {
+    display: flex;
+    gap: 10px;
+    bottom: 20px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    
+  }
+
+  .circlebtn2 input[type="radio"] {
+    display: none;
+  }
+
+  .circlebtn2 label {
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #ccc;
+    height: 15px;
+    width: 15px;
+  }
+
+  .circlebtn2 input:checked + label {
+    background-color: #333;
+  }
+  .slide1{
+    animation-range: entry 0;
+    animation-timeline: view();
+    animation: view linear;
+    
+  }
+  .slide1 h2{
+    margin: 0 auto;
+    font-size: 30px;
+    color: #22ab3e;
+    margin-left: 25%;
+    font-weight: 400;
+    margin-top: 10px;
+    font-family: "monster";
+    
+  }
+  .slide1 p{
+   font-size: 20px;
+   font-family: "monster";
+   margin: 0 auto;
+   margin-top: 10px;
+  }
+.slide2{
+    animation-timeline: view();
+    animation: view1 linear;
+    animation-range: entry 0 ;
+}
+  .slide2 h2{
+    
+    
+    font-family: "monster";
+    font-size: 30px;
+    margin: 0 auto;
+    margin-left: 27%;
+    margin-top: 10px;
+    font-weight: 400;
+    color: #22ab3e;
+  }
+  .slide2 p{
+    font-size: 20px;
+   margin: 0 auto;
+   margin-top: 10px;
+   font-family: "monster";
+   
+  }
+  .slide3{
+    animation-range: entry 0 ;
+    animation-timeline: view1();
+    animation: view linear;
+    
+  }
+  
+  .slide3 h2{
+    margin: 0 auto;
+    font-size: 30px;
+    color: #22ab3e;
+    margin-left: 27%;
+    margin-top: 10px;
+    font-weight: 400;
+    font-family: "monster";
+    
+  }
+  .slide3 p{
+   margin: 0 auto;
+   font-family: "monster";
+   font-size: 20px;
+   margin-top: 10px;
+  }
+.slid4{
+    animation-timeline: view();
+    animation: view2 linear;
+    animation-range: entry 0 ;
+}
+  .slide4 h2{
+    
+    margin-top: 10px;
+    margin: 0 auto;
+    margin-left: 27%;
+    font-size: 30px;
+    font-weight: 400;
+    color: #22ab3e;
+    font-family: "monster";
+    
+    
+  }
+  .slide4 p{
+    font-size: 20px;
+    font-family: "monster";
+    margin-top: 10px;
+    margin: 0 auto;
+   
+  }
+h2{
+    font-family: "monster";
+    font-size: 40px;
+    font-weight: 600;
+    color: #22ab3e;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+.royal{
+    aspect-ratio: 16/9;
+    max-width: 100%;
+    height: 600px;
+    margin-top: 50px;
+    width: 100%;
+    margin-top: 50px;
+    animation: view1 linear;
+    animation-timeline: view();
+    animation-range: entry 0 ;
+}
+h3{
+    font-family: "monster";
+    font-size: 40px;
+    font-weight: 600;
+    color: #22ab3e;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+.arrivalsp{
+    margin-left: 10px;
+    font-family: "monster";
+    font-weight: 400;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.newarrivals{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 50px;
+    margin-left: 50px;
+    margin-top: 40px;
+    margin-right: 50px;
+}
+.newarrivals div{
+    height: 400px;
+    border: 1px  ;
+    border-radius: 20px;
+    box-shadow: #333;
+    transition: 1s ease;
+    box-shadow: 10px 6px 20px 0px rgba(0, 0, 0, 0.5);
+    animation: view1 linear;
+    animation-timeline: view();
+    animation-range: entry 0 ;
+    
+}
+.newarrivals div:hover{
+    scale: 1.1;
+}
+.newarrivals img{
+    width: 100%;
+    height: 80%;
+    border-radius: 20px 20px 0px 0px;
+}
+.newarrivals h2{
+    font-family: "monster";
+    font-size: 25px;
+    font-weight: 400;
+    color: #22ab3e;
+    margin-top: 3px;
+    margin-left:29%;
+}
+.newarrivals p{
+    font-family: "monster";
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(150, 145, 145);
+    margin-top: 3px;
+    margin-left:33%;
+}
+.newarrivalsanim{
+  display: grid;
+  width: calc(250 * 20);
+  animation: goleft  30s linear infinite;
+}
+
+.lunarest{
+    max-width: 100%;
+   
+    width: 100%;
+    margin-top: 50px;
+    animation: view1 linear;
+    animation-timeline: view();
+    animation-range: entry 0 ;
+    
+
+}
+.updates{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  gap: 50px;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  
+}
+.updates div{
+  height: fit-content;
+  box-shadow: 10px 6px 20px 0px rgba(0, 0, 0, 0.5);
+  border: 0px solid;
+  border-radius: 20px;
+  animation: view1 linear;
+    animation-timeline: view();
+    animation-range: entry 0 ;
+}
+.updates div:hover{
+  scale: 1.1;
+}
+.updates img{
+  height: 100%;
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+}
+.updates p{
+  font-family: "monster";
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px;
+}
+.enduro{
+  margin-top: 50px;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+footer{
+  background-color: #22ab3e;
+}
+.footer{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,3fr));
+  gap:20px;
+  color: white;
+  font-family: "monster";
+  font-size: 16px;
+  margin-left: 50px;
+  padding-bottom: 20px;
+}
+footer .h2{
+  font-size: 40px;
+  z-index: 2;
+  color: white;
+  padding-top: 20px;
+  margin-left: 20px;
+}
+footer .footerp{
+  font-size: 20px;
+  margin: 20px;
+  color: white;
+  font-family: "monster";
+}
+.footer div{
+  display: grid;
+  gap: 10px;
+}
+
+.footer img{
+  width: 50px;
+  height: 50px;
+}
+.footer h4{
+  font-size: 20px;
+}
+
+
+@media(max-width:1024px) and (min-width:721px){
+  header{
+    width: 100%;
+  }
+  .image-main {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: 600px;
+    overflow: hidden;
+   
+   
+  }
+  .circlebtn {
+    margin-top: -60px;
+    margin-left: 45%;
+   
+  }
+
+  .circlebtn input[type="radio"] {
+    display: none;
+  }
+
+  .circlebtn  label {
+    
+    
+    width: 15px;
+    height: 15px;
+    border: 2px solid  #22ab3e;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  .circlebtn  input:checked + label {
+    background-color: #22ab3e;
+  }
+
+  .slide1 h2{
+    font-size: 30px;
+    font-weight: 400;
+    color: #22ab3e;
+    font-family: "monster";
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    
+  }
+  
+  .slide2 h2{
+    margin: 0 auto;
+    font-weight: 400;
+    margin-top: 10px;
+    color: #22ab3e;
+    text-align: center;
+    font-size: 30px;
+    font-family: "monster";
+    
+  }
+  .slide3 h2{
+    
+    font-size: 30px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 10px;
+    font-family: "monster";
+    color: #22ab3e;
+    
+   
+  }
+  .frontimagep{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -410px;
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    z-index: 3;
+    padding: 20px;
+  }
+  .navfav{
+    z-index: 4;
+    font-family: "monster";
+    font-size: 30px;
+    margin-top: -580px;
+    margin-left: 20px;
+    font-weight: 800;
+    color: white;
+  }
+ 
+  .navbutton{
+    width: 120px;
+    height: 50px;
+    border: 0;
+    border-radius: 20px;
+    padding: 5px;
+    font-family: "monster";
+    font-size: 20px;
+    font-size: 400;
+    z-index: 5;
+    background-color: #22ab3e;
+    color: white;
+    margin-top: -250px;
+    margin-left: 44%;
+  }
+ 
+   .royal{
+        max-width: 100%;
+        height: auto;
+    }
+   .newarrivals{
+    grid-template-columns: repeat(auto-fill,minmax(230px,1fr)); 
+   
+    margin-right: 30px;
+    margin-left: 30px;
+    gap: 50px;
+    }
+    .newarrivals div{
+      height: 400px;
+    }
+    .newarrivals h2{
+      font-family: "monster";
+      font-size: 25px;
+      font-weight: 400;
+      color: #22ab3e;
+      margin-top: 3px;
+      margin-left: 0;
+      text-align: center;
+      
+  }
+    .newarrivals p{
+      font-family: "monster";
+      font-size: 20px;
+      font-weight: 400;
+      color: rgb(150, 145, 145);
+      margin-top: 3px;
+      margin-left: 0;
+      text-align: center;
+  }
+  #new1h{
+    text-align: center;
+  }
+  #new2h{
+    
+    text-align: center;
+  }
+  #new3h{
+    text-align: center;
+  }
+  #new4h{
+    text-align: center;
+  }
+  #new5h{
+    text-align: center;
+  }
+
+  #new6h{
+    text-align: center;
+  }
+  #new7h{
+    text-align: center;
+  }
+  #new8h{
+    text-align: center;
+  }
+  #new9h{
+    text-align: center;
+  }
+  #new10h{
+    text-align: center;
+  }
+
+   .updates{
+        grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+        margin-right: 30px;
+        margin-left: 30px;
+        gap: 30px;
+    }
+    .enduro{
+      max-width: 100%;
+      height: auto;
+    }
+    .footer{
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(230px,3fr));
+      gap:20px;
+      color: white;
+      font-family: "monster";
+      font-size: 16px;
+      margin-left: 50px;
+    }
+}
+@media(max-width:720px) and (min-width:540px){
+  
+  .image-main {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    
+   
+  }
+  
+  .image img {
+    
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+  }
+
+
+  .circlebtn {
+    z-index: 1;
+    margin-top: -60px;
+    margin-left: 42%;
+    display: flex;
+    gap: 10px;
+  }
+
+  .circlebtn input[type="radio"] {
+    display: none;
+  }
+
+  .circlebtn  label {
+    width: 15px;
+    height: 15px;
+    border: 2px solid  #22ab3e;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  .circlebtn  input:checked + label {
+    background-color: #22ab3e;
+  }
+  .frontimagep{
+    padding: 20px;
+    margin-top: -380px;
+    z-index: 3;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+   
+  }
+  .navfav{
+    z-index: 4;
+    font-family: "monster";
+    font-size: 30px;
+    margin-top: -580px;
+    margin-left: 20px;
+    font-weight: 800;
+    color: white;
+  }
+ 
+  .navbutton{
+    width: 120px;
+    height: 50px;
+    border: 0;
+    border-radius: 20px;
+    padding: 5px;
+    font-family: "monster";
+    font-size: 20px;
+    font-size: 400;
+    z-index: 5;
+    background-color: #22ab3e;
+    color: white;
+    margin-top: -230px;
+    margin-left: 40%;
+  }
+  .newarrivals{
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); 
+   
+    margin-right: 30px;
+    margin-left: 30px;
+    gap: 50px;
+    }
+
+    .newarrivals div{
+      height: 400px;
+    }
+    .newarrivals h2{
+      font-family: "monster";
+      font-size: 25px;
+      font-weight: 400;
+      color: #22ab3e;
+      margin-top: 3px;
+      margin-left: 0;
+      text-align: center;
+      
+  }
+    .newarrivals p{
+      font-family: "monster";
+      font-size: 20px;
+      font-weight: 400;
+      color: rgb(150, 145, 145);
+      margin-top: 3px;
+      margin-left: 0;
+      text-align: center;
+  }
+  #new1h{
+    text-align: center;
+  }
+  #new2h{
+    
+    text-align: center;
+  }
+  #new3h{
+    text-align: center;
+  }
+  #new4h{
+    text-align: center;
+  }
+  #new5h{
+    text-align: center;
+  }
+
+  #new6h{
+    text-align: center;
+  }
+  #new7h{
+    text-align: center;
+  }
+  #new8h{
+    text-align: center;
+  }
+  #new9h{
+    text-align: center;
+  }
+  #new10h{
+    text-align: center;
+  }
+    .image-main2 {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .sliders {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+      gap: 50px;
+      padding: 20px;
+      margin-top: 20px;
+      margin-left: 10px;
+      animation: view1 linear;
+      animation-timeline: view();
+      animation-range: entry 0 ;
+    }
+  
+    .updates{
+      grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+      margin-right: 30px;
+      margin-left: 30px;
+      gap: 30px;
+  }
+
+  .royal{
+   
+    max-width: 100%;
+    height: auto;
+    margin-top: 50px;
+    aspect-ratio: 16/9;
+    margin-top: 50px;
+    animation: view1 linear;
+    animation-timeline: view();
+    animation-range: entry 0 ;
+}
+
+.footer{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(230px,3fr));
+  gap:20px;
+  color: white;
+  font-family: "monster";
+  font-size: 16px;
+  margin-left: 20px;
+}
+}
+
+@media(max-width:540px) and (min-width:360px){
+  
+  .login{
+    margin-right: 0px;
+    margin-left: 30px;
+  }
+  h1{
+    font-size: 25px;
+    margin-left: 10px;
+  }
+  .signup{
+    margin-left: 15px;
+  }
+  .circlebtn {
+    margin-top: -60px;
+    margin-left: 45%;
+    z-index: 1;
+    display: flex;
+    gap: 10px;
+  }
+
+  .circlebtn input[type="radio"] {
+    display: none;
+  }
+
+  .circlebtn  label {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid  #22ab3e;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .circlebtn  input:checked + label {
+    background-color: #22ab3e;
+  }
+
+  .slide1 h2{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    font-family: "monster";
+    font-size: 30px;
+    font-weight: 400;
+    color: #22ab3e;
+  }
+  
+  .slide2 h2{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    font-family: "monster";
+    font-size: 30px;
+    font-weight: 400;
+    color: #22ab3e;
+  }
+  .slide3 h2{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    font-family: "monster";
+    font-size: 30px;
+    font-weight: 400;
+    color: #22ab3e;
+  }
+  .frontimagep{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -380px;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    z-index: 3;
+    padding: 20px;
+  }
+  .navfav{
+    z-index: 4;
+    font-family: "monster";
+    font-size: 30px;
+    margin-top: -580px;
+    margin-left: 20px;
+    font-weight: 800;
+    color: white;
+  }
+ 
+  .navbutton{
+    width: 120px;
+    height: 50px;
+    border: 0;
+    border-radius: 20px;
+    padding: 5px;
+    font-family: "monster";
+    font-size: 20px;
+    font-size: 400;
+    z-index: 5;
+    background-color: #22ab3e;
+    color: white;
+    margin-top: -250px;
+    margin-left: 44%;
+  }
+  .image-main {
+    position: relative;
+    max-width: 100%;
+    height: 300px;
+    overflow: hidden;
+    
+   
+  }
+  
+  .image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .newarrivals{
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr)); 
+   
+    margin-right: 30px;
+    margin-left: 30px;
+    gap: 30px;
+    }
+
+    .image-main2 {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .sliders {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+      gap: 50px;
+      padding: 20px;
+      margin-top: 20px;
+      margin-left: 10px;
+      animation: view1 linear;
+      animation-timeline: view();
+      animation-range: entry 0 ;
+    }
+  
+    .updates{
+      grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
+      margin-right: 30px;
+      margin-left: 30px;
+      gap: 30px;
+  }
+
+  .royal{
+   
+    max-width: 100%;
+    height: auto;
+    margin-top: 50px;
+    aspect-ratio: 16/9;
+    margin-top: 50px;
+    animation: view1 linear;
+    animation-timeline: view();
+    animation-range: entry 0 ;
+}
+
+
+.image-main {
+  position: relative;
+  max-width: 100%;
+  height: 500px;
+  overflow: hidden;
+  
+ 
+}
+
+.image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+
+.circlebtn {
+  margin-top: -60px;
+  margin-left: 42%;
+  z-index: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.circlebtn input[type="radio"] {
+  display: none;
+}
+
+.circlebtn  label {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid  #22ab3e;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.circlebtn  input:checked + label {
+  background-color: #22ab3e;
+}
+.frontimagep{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: -380px;
+  color: white;
+  font-size: 30px;
+  padding: 20px;
+  text-align: center;
+  z-index: 3;
+ 
+}
+.navfav{
+  z-index: 4;
+  font-family: "monster";
+  font-size: 30px;
+  margin-top: -580px;
+  margin-left: 20px;
+  font-weight: 800;
+  color: white;
+}
+
+.navbutton{
+  width: 120px;
+  height: 50px;
+  border: 0;
+  border-radius: 20px;
+  padding: 5px;
+  font-family: "monster";
+  font-size: 20px;
+  font-size: 400;
+  z-index: 5;
+  background-color: #22ab3e;
+  color: white;
+  margin-top: -230px;
+  margin-left: 40%;
+}
+.newarrivals{
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); 
+ 
+  margin-right: 30px;
+  margin-left: 30px;
+  gap: 50px;
+  }
+
+  .newarrivals div{
+    height: 400px;
+  }
+  .newarrivals h2{
+    font-family: "monster";
+    font-size: 25px;
+    font-weight: 400;
+    color: #22ab3e;
+    margin-top: 3px;
+    margin-left: 0;
+    text-align: center;
+    
+}
+  .newarrivals p{
+    font-family: "monster";
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(150, 145, 145);
+    margin-top: 3px;
+    margin-left: 0;
+    text-align: center;
+}
+#new1h{
+  text-align: center;
+}
+#new2h{
+  
+  text-align: center;
+}
+#new3h{
+  text-align: center;
+}
+#new4h{
+  text-align: center;
+}
+#new5h{
+  text-align: center;
+}
+
+#new6h{
+  text-align: center;
+}
+#new7h{
+  text-align: center;
+}
+#new8h{
+  text-align: center;
+}
+#new9h{
+  text-align: center;
+}
+#new10h{
+  text-align: center;
+}
+  .image-main2 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .sliders {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 50px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    animation: view1 linear;
+    animation-timeline: view();
+    animation-range: entry 0 ;
+  }
+
+  .updates{
+    grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+    margin-right: 30px;
+    margin-left: 30px;
+    gap: 30px;
+}
+
+.royal{
+ 
+  max-width: 100%;
+  height: auto;
+  margin-top: 50px;
+  aspect-ratio: 16/9;
+  margin-top: 50px;
+  animation: view1 linear;
+  animation-timeline: view();
+  animation-range: entry 0 ;
+}
+
+.footer{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(230px,3fr));
+gap:20px;
+color: white;
+font-family: "monster";
+font-size: 16px;
+margin-left: 35%;
+}
+}

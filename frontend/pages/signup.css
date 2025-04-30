@@ -1,0 +1,398 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "monster";
+    src: url("/frontend/fonts/Montserrat-VariableFont_wght.ttf");
+}
+body{
+    background-color: white;
+}
+
+h1{
+    text-align: center;
+    padding: 10px;
+}
+h1 a{
+    font-family: "monster";
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+
+}
+
+
+header{
+    background-color: #22ab3e;
+    
+    height: 65px;
+    max-width: 100%;
+    margin-top: 0;
+    
+   
+
+}
+header button{
+    color: white;
+    background-color: #22ab3e;
+    border: 0;
+    font-size: 25px;
+    margin-right: 20px;
+    font-family: "monster";
+}
+
+h2{
+    font-size: 40px;
+    color: #22ab3e;
+    font-family: "monster";
+    font-weight: 500;
+    text-align: center;
+    margin-top: 40px;
+    
+}
+.p{
+    font-size: 20px;
+    color: black;
+    font-family: "monster";
+    font-weight: 500;
+    margin-top:10px;
+    text-align: center;
+    margin: 20px;
+}
+
+
+.name{
+max-width: 100%;
+ grid-column: 1/3;
+ margin-left: 0px;
+ margin-top: 10px;
+ 
+ 
+}
+.name label{
+    font-family: "monster";
+    font-size: 25px;
+    margin-top: 4px;
+    font-weight: 400;
+     
+}
+.name input{
+border-radius: 10px;
+border: 2px solid  #22ab3e;
+ height: 40px;
+ padding: 5px;
+ width: 100%;
+ margin-top: 10px;
+ box-sizing: border-box;
+
+}
+.email{
+    
+    grid-column: 1/3;
+    
+    margin-top: 15px;
+    margin-left: 0px;
+}
+.email label{
+    font-family: "monster";
+    font-size: 25px;
+    font-weight: 400;
+    
+    
+}
+.email input{
+    
+    height: 40px;
+    
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    border: 2px solid  #22ab3e;
+    
+    
+}
+.username{
+    margin-top: 10px;
+    grid-column: 1/3;
+    margin-left: 0px;
+    
+    
+}
+.username label{
+    font-size: 25px;
+    font-family: "monster";
+    font-family: "monster";
+    font-weight: 400;
+    font-size: 25px;
+    
+    
+}
+.username input{
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    border: 2px solid  #22ab3e;
+    margin-top: 10px;
+
+}
+.dob{
+    
+    grid-row: 4/5;
+    margin-left: 0px;
+    grid-column: 1/2;
+}
+.dob label{
+    
+    font-size: 25px;
+    font-weight: 400;
+    font-size: 25px;
+    font-family: "monster";
+    font-family: "monster";
+}
+.dob input{
+    
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid  #22ab3e;
+    margin-top: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+   
+}
+.age{
+    
+    grid-column: 2/3;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+.age label{
+    font-weight: 400;
+    font-size: 25px;
+    font-family: "monster";
+    font-weight: 400;
+    
+    font-family: "monster";
+}
+.age input{
+    
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid  #22ab3e;
+    margin-top: 10px;
+    box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+    
+   
+}
+.password{
+    grid-column: 1/3;
+    margin-top: 0px;
+    margin-left: 0px;
+    
+}
+.password label{
+    font-size: 25px;
+    font-size: 25px;
+    font-family: "monster";
+    font-family: "monster";
+    font-weight: 400;
+   
+    
+}
+.password input{
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 2px solid  #22ab3e;
+    margin-top: 10px;
+    padding: 5px;
+    width: 100%;
+    height: 40px;
+    
+    
+}
+
+
+.lastp{
+    
+    font-weight: 500;
+    margin: 0 auto;
+    font-size: 20;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    grid-row: 5/6;
+    font-family: "monster";
+    grid-column: 1/3;
+    
+}
+.lastnav{
+    color: #22ab3e;
+}
+
+
+
+.registrationForm{
+    display: grid;
+    
+    margin: 0 auto;
+    place-content: center;
+    border: 0;
+    border-radius: 30px;
+    max-width: 400px;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    padding: 20px;
+    margin-top: 40px;
+    background-color:  #ddddff;
+    box-sizing: border-box;
+}
+
+.submit{
+    grid-column: 1/3;
+    display: flex;
+    justify-content: center;
+}
+.submit button{
+    
+    height: 40px;
+    width: 150px;
+    background-color: #22ab3e;
+    color: white;
+    border: 0;
+    font-family:"monster" ;
+    font-size: 20px;
+    
+    margin-top: 25px;
+    
+    border-radius: 20px;
+    
+
+}
+footer{
+    background-color: #22ab3e;
+  }
+  .footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,2fr));
+    gap:20px;
+    color: white;
+    font-family: "monster";
+    font-size: 16px;
+    margin-left: 50px;
+  }
+  .footer div{
+    display: grid;
+    gap: 10px;
+  }
+  footer .h2{
+    font-size: 40px;
+    z-index: -1;
+    color: white;
+    padding-top: 20px;
+  }
+  .footer img{
+    width: 50px;
+    height: 50px;
+  }
+  footer .footerp{
+    font-size: 30px;
+    z-index: -1;
+    color: white;
+    padding-top: 20px;
+    font-family: "monster";
+    padding-bottom: 20px;
+    margin-left: 20px;
+  }
+  
+  .footer h4{
+    font-size: 20px;
+  }
+  @media (min-width:1024px) and (max-width:720px) {
+    footer{
+        background-color: #22ab3e;
+      }
+      .footer{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(230px,3fr));
+        gap:20px;
+        color: white;
+        font-family: "monster";
+        font-size: 16px;
+        margin-left: 50px;
+      }
+      .footer div{
+        display: grid;
+        gap: 10px;
+        width: 0;
+      }
+      
+      .footer h4{
+        font-size: 20px;
+      }
+  }
+
+  @media (min-width:720px) and (max-width:540px){
+
+    footer{
+        background-color: #22ab3e;
+      }
+      .footer{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(230px,3fr));
+        gap:20px;
+        color: white;
+        font-family: "monster";
+        font-size: 16px;
+        margin-left: 20px;
+      }
+      .footer div{
+        display: grid;
+        gap: 10px;
+        width: 0;
+      }
+      
+      .footer h4{
+        font-size: 20px;
+      }
+  }
+  @media (min-width:540px) and (max-width:360px) {
+    footer{
+        background-color: #22ab3e;
+        display: grid;
+        place-items: center;
+        
+      }
+      .footer{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(230px,3fr));
+        gap:20px;
+        color: white;
+        font-family: "monster";
+        font-size: 16px;
+        margin: 0 auto;
+        }
+      .footer div{
+        display: grid;
+        gap: 10px;
+      }
+      
+      .footer h4{
+        font-size: 20px;
+      }
+
+      .footer .footerp{
+        font-size: 20px;
+        z-index: -1;
+        color: white;
+        font-family: "monster";
+        
+        
+      }
+      
+  }

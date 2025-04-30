@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>favfurniture</title>
+ <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+  <div class="image-main">
+    <div class="images">
+      <div class="image">
+        <img src="mugd.jpg" alt="">
+        <h1>Welcome to Our Gallery</h1>
+      </div>
+      <div class="image">
+        <img src="chairs.jpg" alt="">
+        <h1>Explore Our Designs</h1>
+      </div>
+      <div class="image">
+        <img src="gaming setups.jpg" alt="">
+        <h1>Find Your Perfect Setup</h1>
+      </div>
+      <div class="image">
+        <img src="mugd.jpg" alt="">
+        <h1>Stay Inspired</h1>
+      </div>
+    </div>
+
+    <!-- Navigation dots -->
+    <div class="circlebtn">
+      <input type="radio" name="circle" id="circle1" checked>
+      <label for="circle1"></label>
+      <input type="radio" name="circle" id="circle2">
+      <label for="circle2"></label>
+      <input type="radio" name="circle" id="circle3">
+      <label for="circle3"></label>
+      <input type="radio" name="circle" id="circle4">
+      <label for="circle4"></label>
+    </div>
+  </div>
+
+
+  <div class="sliders">
+    <!-- Second Slider -->
+    <div class="slide1">
+    <div class="slider-container2">
+      <div class="slides2">
+        <div class="slide2"><img src="mugd.jpg" alt="Slide 1"></div>
+        <div class="slide2"><img src="chairs.jpg" alt="Slide 2"></div>
+        <div class="slide2"><img src="gaming setups.jpg" alt="Slide 3"></div>
+        <div class="slide2"><img src="mugd.jpg" alt="Slide 4"></div>
+      </div>
+      <div class="navigation2">
+        <input type="radio" name="slider2-1" id="slider2-1" checked>
+        <label for="slider2-1"></label>
+        <input type="radio" name="slider2-1" id="slider2-2">
+        <label for="slider2-2"></label>
+        <input type="radio" name="slider2-1" id="slider2-3">
+        <label for="slider2-3"></label>
+        <input type="radio" name="slider2-1" id="slider2-4">
+        <label for="slider2-4"></label>
+      </div>
+      
+    </div>
+    <p>Mugs</p>
+    </div>
+    <div class="slide2">
+    <div class="slider-container2">
+        <div class="slides2">
+          <div class="slide2"><img src="mugd.jpg" alt="Slide 1"></div>
+          <div class="slide2"><img src="chairs.jpg" alt="Slide 2"></div>
+          <div class="slide2"><img src="gaming setups.jpg" alt="Slide 3"></div>
+          <div class="slide2"><img src="mugd.jpg" alt="Slide 4"></div>
+        </div>
+        <div class="navigation2">
+          <input type="radio" name="slider2-2" id="slider3-1" checked>
+          <label for="slider3-1"></label>
+          <input type="radio" name="slider2-2" id="slider3-2">
+          <label for="slider3-2"></label>
+          <input type="radio" name="slider2-2" id="slider3-3">
+          <label for="slider3-3"></label>
+          <input type="radio" name="slider2-2" id="slider3-4">
+          <label for="slider3-4"></label>
+        </div>
+   
+    </div>
+    <p>Mugs</p>
+</div>
+  </div>
+
+
+  
+  <script>
+     images = document.querySelector('.images');
+    var button = document.querySelectorAll('.circlebtn input');
+    let image = 0;
+    var allImages= button.length;
+
+    
+    function nextImage(newIndex) {
+      image = newIndex;
+      images.style.transform = `translateX(-${image * 100}%)`;
+      button[image].checked = true;
+    }
+
+ 
+    function leftAuto() {
+      image++;
+      if (image >= allImages) image = 0; 
+      nextImage(image);
+    }
+
+   
+    let leftAutoInterval = setInterval(leftAuto, 5000); 
+
+   
+    button.forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        clearInterval(leftAutoInterval); 
+        nextImage(i); 
+        leftAutoInterval = setInterval(leftAuto, 5000); 
+      });
+    });
+
+
+
+    
+    document.querySelectorAll('.slider-container2').forEach((sliderContainer2, index2) => {
+      const slides2 = sliderContainer2.querySelector('.slides2');
+      const radios2 = sliderContainer2.querySelectorAll('.navigation2 input');
+      let currentIndex2 = 0;
+
+      // Function to change the slide
+      function changeSlide2(newIndex2) {
+        currentIndex2 = newIndex2;
+        slides2.style.transform = `translateX(-${currentIndex2 * 100}%)`;
+        radios2[currentIndex2].checked = true;
+      }
+
+      // Auto slide function
+      function autoSlide2() {
+        currentIndex2++;
+        if (currentIndex2 >= radios2.length) currentIndex2 = 0;
+        changeSlide2(currentIndex2);
+      }
+
+      // Start auto-slide
+      let autoSlideInterval2 = setInterval(autoSlide2, 5000);
+
+      // Manual control using radio buttons
+      radios2.forEach((radio2, i) => {
+        radio2.addEventListener('click', () => {
+          clearInterval(autoSlideInterval2);
+          changeSlide2(i);
+          autoSlideInterval2 = setInterval(autoSlide2, 5000);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
